@@ -1,0 +1,80 @@
+const events = [
+['IAAPA Expo','2026-11-17','2026-11-20','Орландо, США','Orange County Convention Center','https://iaapa.org/expos-and-events/iaapa-expo','Международная выставка аттракционов, оборудования для детских парков, технологий и концепций развлечений. Подходит для поиска поставщиков и знакомства с мировыми тенденциями.','fun','world','Образовательная программа: 16–19 ноября.'],
+['MALLPIC SOCHI','2026-11-19','2026-11-22','Сочи, Россия','Гранд Карат / Летний театр','https://mallpic.ru/','Выставка-форум коммерческой и инвестиционной недвижимости, логистики, ритейла и электронной коммерции. Для UNITRAMP — контакты с собственниками торговых центров, девелоперами и потенциальными партнёрами.','property','ru','На сайте организатора есть старые блоки программы за май. Уточните программу и площадку ноябрьского выпуска перед поездкой.'],
+['EAG360 / Amuse Expo','2027-01-12','2027-01-14','Лондон, Великобритания','ExCeL London','https://eag360show.com/','Игровые автоматы, интерактивные развлечения и решения для развлекательных центров. Возможность изучить оборудование и форматы платных развлечений.','fun','world'],
+['Entertainment & Leisure MENA','2027-01-18','2027-01-20','Дубай, ОАЭ','Dubai World Trade Centre','https://www.enlmena.com/','Выставка, ранее известная как DEAL. Оборудование и решения для индустрии развлечений, семейных центров и проектов на Ближнем Востоке.','fun','world'],
+['ATRAX Expo','2027-01-28','2027-01-30','Стамбул, Турция','Istanbul Expo Center','https://en.atraxexpo.com/','Аттракционы, рекреация, детские и спортивные площадки, активный отдых и решения для общественных пространств. Полезна для знакомства с производителями и проектными партнёрами.','fun','world'],
+['IAAPI Amusement Expo','2027-03-03','2027-03-05','Мумбаи, Индия','Bombay Exhibition Centre','https://iaapi.org/about-expo-2027','Выставка оборудования для парков, аттракционов и крытых развлекательных центров. Встречи с индийскими и международными производителями и операторами.','fun','world'],
+['РАППА ЭКСПО','2027-03-17','2027-03-19','Москва, Россия','ВДНХ, павильон 20','https://raapa-expo.ru/','Выставка аттракционов и развлекательного оборудования: парки, детские и спортивные площадки, VR, проектирование и тематизация. Для UNITRAMP — российские заказчики, операторы парков и отраслевые партнёры.','fun','ru'],
+['China Attractions Expo — CAAPA','2027-03-17','2027-03-19','Пекин, Китай','Capital International Exhibition Center of China','https://en.caapa.org/Exhibition_Profile.html','Выставка китайской ассоциации парков и аттракционов. Производители аттракционов, оборудования и решений для туристических и развлекательных проектов.','fun','cn'],
+['Amusement Expo International','2027-03-17','2027-03-18','Лас-Вегас, США','Las Vegas Convention Center','https://www.amusementexpo.org/','Игровые автоматы, VR, лазертаг, платёжные системы и оборудование для семейных развлекательных центров.','fun','world','Образовательная программа: 15–16 марта.'],
+['NATMALL','2027-04-13','2027-04-15','Москва, Россия','Крокус Экспо, павильон 1, зал 3','https://natmall.ru/','Выставка по развитию коммерческой недвижимости и масштабированию ритейла, точек питания, индустрии развлечений и услуг. Для UNITRAMP — знакомства с ТРЦ, управляющими компаниями и девелоперами, поиск площадок и заказчиков.','property','ru'],
+['IAAPA Expo Middle East','2027-04-13','2027-04-15','Абу-Даби, ОАЭ','ADNEC Centre Abu Dhabi','https://iaapa.org/expos-and-events/expo-middle-east','Аттракционы, семейные развлекательные центры и проекты индустрии развлечений Ближнего Востока. Поставщики и операторы развивающегося регионального рынка.','fun','world','Образовательная программа: 12–15 апреля.'],
+['GTI Southeast Asia Expo','2027-04-21','2027-04-23','Куала-Лумпур, Малайзия','World Trade Centre Kuala Lumpur','https://gti-amuse.com/','Игровое и развлекательное оборудование для рынка Юго-Восточной Азии. Производители, поставщики и операторы семейных развлекательных центров.','fun','world'],
+['Asia Amusement & Attractions Expo — AAA','2027-05-10','2027-05-12','Гуанчжоу, Китай','China Import and Export Fair Complex','https://www.aaaexpos.com/','Asia Amusement & Attractions Expo: оборудование для парков, детских развлекательных центров и аттракционов. Одна из ключевых точек для знакомства с китайскими поставщиками.','fun','cn','Предварительные даты: опубликованы в каталоге Global Exhibition, официальный сайт не удалось проверить. Подтвердите даты у организатора.', 'https://globalexhibition.org/en/exhibitions/24150/asia-amusement-attraction-expo-aaa-2027/'],
+['Неделя российского ритейла','2027-05-31','2027-06-03','Москва, Россия','Центр международной торговли','https://retailweek.ru/','Форум розничной торговли с деловой программой и выставочной экспозицией. Для UNITRAMP — потенциальные партнёры из ритейла; перед участием стоит проверить наличие сессий о ТРЦ и развлекательных форматах.','property','ru','Даты опубликованы в выставочном каталоге TotalExpo; требуется подтверждение организатора.', 'https://www.totalexpo.ru/expo/7387.aspx'],
+['Saudi Entertainment & Amusement Expo — SEA','2027-06-01','2027-06-03','Эр-Рияд, Саудовская Аравия','Riyadh Front Exhibition & Conference Center','https://www.saudientertainmentexpo.com/event-info/','Выставка развлечений и аттракционов Саудовской Аравии. Оборудование, технологии и контакты для проектов на местном рынке.','fun','world'],
+['IAAPA Expo Asia','2027-06-29','2027-07-01','Осака, Япония','INTEX Osaka','https://iaapa.org/expos-and-events/expo-asia','Азиатские и международные производители, новые технологии и концепции парков. Оборудование для аттракционов и семейных развлекательных центров.','fun','world','Образовательная программа: 28 июня – 1 июля.'],
+['GTI China Expo','2027-09-10','2027-09-12','Гуанчжоу, Китай','China Import and Export Fair, Pazhou Complex','https://gti-amuse.com/gtiexpo/details?tyid=0','Игровые автоматы, аркады и оборудование для семейных развлекательных центров. Подходит для поиска китайских производителей и сравнения оборудования.','fun','cn'],
+['IAAPA Expo Europe','2027-09-21','2027-09-23','Вена, Австрия','VIECON — Vienna Congress & Convention Center','https://iaapa.org/expos-and-events/expo-europe','Европейские производители, операторы парков и новые развлекательные форматы. Международные контакты, концепции и оборудование.','fun','world','Образовательная программа: 20–24 сентября.'],
+['CAAPA — Tourism, Leisure & Entertainment Expo','2027-10-20','2027-10-22','Чжэнчжоу, Китай','Zhengzhou International Convention and Exhibition Center','https://en.caapa.org/Exhibition_Profile.html','Туристические, досуговые и развлекательные проекты, оборудование и решения для парков. Осенняя выставка CAAPA в Китае.','fun','cn'],
+['Инвестиционный форум CRE',null,null,'Москва, Россия','Кибердом','https://investforum.cre.ru/','Форум инвестиций в коммерческую недвижимость. Инвесторы, собственники и участники рынка; возможны знакомства с партнёрами для проектов детских парков.','property','ru','Заявлен март 2027 года. Точные дни пока не опубликованы.'],
+['RCSC Awards / встречи РСТЦ',null,null,'Россия','Площадка пока не объявлена','https://rcsc.pro/news/rcsc-awards-perehodit-na-standarty-gost-perezapusk-glavnoy-otraslevoy-premii-torgovoy-nedvizhimosti-v-2027-godu.html','Профессиональная премия Российского совета торговых центров. Профильная аудитория торговой недвижимости: владельцы, управляющие и представители ТЦ. Перезапуск премии объявлен на 2027 год; другие встречи РСТЦ имеют отдельные анонсы.','property','ru','2027 год. Точная дата, город и площадка пока не объявлены.']
+].map((e,id)=>({id,name:e[0],start:e[1],end:e[2],city:e[3],venue:e[4],url:e[5],description:e[6],type:e[7],region:e[8],note:e[9],source:e[10]}));
+const currentParts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Novosibirsk',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+const currentValue=type=>Number(currentParts.find(p=>p.type===type).value);
+const currentYear=currentValue('year'),currentMonth=currentValue('month')-1,currentDay=String(currentValue('day')).padStart(2,'0');
+const todayKey=`${currentYear}-${String(currentMonth+1).padStart(2,'0')}-${currentDay}`;
+let year=currentYear, month=currentMonth, mode='calendar';
+const $=id=>document.getElementById(id), date=s=>new Date(s+'T12:00:00'), iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const format=s=>date(s).toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric'});
+const range=e=>e.start?`${format(e.start)} — ${format(e.end)}`:(e.name.startsWith('Инвестиционный')?'Март 2027 · дни уточняются':'2027 · дата уточняется');
+function filtered(){const q=$('search').value.toLowerCase().trim(),r=$('region').value;return events.filter(e=>(r==='all'||e.region===r)&&`${e.name} ${e.city} ${e.description}`.toLowerCase().includes(q))}
+function badge(e){return `<span class="badge ${e.type}">${e.type==='property'?'Торговая недвижимость':'Развлечения'}${e.source?' · даты предварительные':''}</span>`}
+function card(e){return `<button class="card" data-event="${e.id}">${badge(e)}<h3>${e.name}</h3><p>${e.city}</p><div class="card-bottom"><span>${range(e)}</span><span class="arrow">↗</span></div></button>`}
+function render(){const selected=filtered();renderYear(selected);$('monthTitle').textContent=new Date(year,month,1).toLocaleDateString('ru-RU',{month:'long',year:'numeric'}).replace(/^./,s=>s.toUpperCase());const first=new Date(year,month,1),offset=(first.getDay()+6)%7,days=new Date(year,month+1,0).getDate(),cells=Math.ceil((days+offset)/7)*7;let html='';const monthIds=new Set();for(let i=0;i<cells;i++){const n=i-offset+1;if(n<1||n>days){html+='<div class="day blank" aria-hidden="true"></div>';continue}const key=iso(new Date(year,month,n)),ev=selected.filter(e=>e.start&&key>=e.start&&key<=e.end);ev.forEach(e=>monthIds.add(e.id));const inner=`<span class="num">${n}</span>${ev.map(e=>`<span class="event-pill ${e.type}">${e.name}</span>`).join('')}`;html+=ev.length?`<button class="day has-events ${key===todayKey?'today':''}" data-date="${key}" aria-label="${format(key)}: ${ev.map(e=>e.name).join(', ')}">${inner}</button>`:`<div class="day ${key===todayKey?'today':''}">${inner}</div>`} $('grid').innerHTML=html;$('monthCount').textContent=`Событий в месяце: ${monthIds.size}`;const dated=selected.filter(e=>e.start).sort((a,b)=>a.start.localeCompare(b.start));$('allEvents').innerHTML=selected.length?[...dated,...selected.filter(e=>!e.start)].map(card).join(''):'<p class="empty">По вашему запросу событий нет.</p>';$('upcoming').innerHTML=dated.slice(0,3).map(card).join('')||'<p class="empty">Событий не найдено.</p>';$('pendingEvents').innerHTML=selected.filter(e=>!e.start).map(e=>`<button class="pending-row" data-event="${e.id}"><div><small>${range(e)}</small><h3>${e.name}</h3><small>${e.city}</small></div><span>↗</span></button>`).join('')||'<p>Событий без точной даты по этому фильтру нет.</p>'}
+function show(items){$('detailBody').innerHTML=items.map(e=>`<article class="modal-event">${badge(e)}<h2>${e.name}</h2><p class="meta">${range(e)}<br>${e.city} · ${e.venue}</p><p>${e.description}</p>${e.note?`<p class="notice">${e.note}</p>`:''}<a class="action" href="${e.url}" target="_blank" rel="noopener noreferrer">Сайт мероприятия ↗</a>${e.source?`<p class="meta"><a href="${e.source}" target="_blank" rel="noopener noreferrer">Источник предварительных дат ↗</a></p>`:''}</article>`).join('');$('detail').showModal()}
+document.addEventListener('click',e=>{const event=e.target.closest('[data-event]'),day=e.target.closest('[data-date]');if(event)show([events[Number(event.dataset.event)]]);else if(day)show(filtered().filter(x=>x.start&&day.dataset.date>=x.start&&day.dataset.date<=x.end))});$('close').onclick=()=>$('detail').close();$('detail').addEventListener('click',e=>{if(e.target===$('detail')){const r=$('detail').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('detail').close()}});
+function renderYear(selected){
+  $('yearTitle').textContent=`${year} год`;
+  $('yearGrid').innerHTML=Array.from({length:12},(_,m)=>{
+    const first=iso(new Date(year,m,1)),last=iso(new Date(year,m+1,0));
+    const items=selected.filter(e=>e.start&&e.start<=last&&e.end>=first);
+    const uncertain=selected.filter(e=>!e.start&&e.name.startsWith('Инвестиционный')&&year===2027&&m===2);
+    const title=new Date(year,m,1).toLocaleDateString('ru-RU',{month:'long'});
+    return `<article class="year-month"><div class="year-month-head"><h3>${title}</h3><span>${items.length+uncertain.length}</span></div>${[...items,...uncertain].map(e=>`<button class="year-event ${e.type}" data-event="${e.id}"><strong>${e.name}</strong><span>${e.city}</span>${!e.start?'<small>Дни уточняются</small>':e.source?'<small>Даты предварительные</small>':''}</button>`).join('')||'<p class="month-empty">Событий пока нет</p>'}</article>`
+  }).join('');
+  const pending=selected.filter(e=>!e.start&&!e.name.startsWith('Инвестиционный')&&year===2027);
+  $('yearPending').innerHTML=pending.length?`<div class="year-unassigned"><h3>Месяц уточняется</h3>${pending.map(e=>`<button class="year-event ${e.type}" data-event="${e.id}"><strong>${e.name}</strong><span>${e.city} · ${year}</span></button>`).join('')}</div>`:'';
+}
+function move(delta){const d=new Date(year,month+delta,1);year=d.getFullYear();month=d.getMonth();render()}
+$('prev').onclick=()=>move(-1);$('next').onclick=()=>move(1);
+$('today').onclick=()=>{year=currentYear;month=currentMonth;render()};
+$('prevYear').onclick=()=>{year--;render()};$('nextYear').onclick=()=>{year++;render()};
+$('currentYear').onclick=()=>{year=currentYear;render()};
+$('region').onchange=render;$('search').oninput=render;
+function setView(v){mode=v;for(const [view,tab,name] of [['calendarView','calendarTab','calendar'],['yearView','yearTab','year'],['listView','listTab','list']]){$(view).hidden=v!==name;$(tab).classList.toggle('active',v===name);$(tab).setAttribute('aria-pressed',v===name)}}
+$('calendarTab').onclick=()=>setView('calendar');$('yearTab').onclick=()=>setView('year');$('listTab').onclick=()=>setView('list');setView('calendar');render();
+
+function preparePrint(){
+  const output=$('printOutput');
+  output.className=mode==='list'?'print-list':'print-calendar';
+  const title=mode==='calendar'?$('monthTitle').textContent:mode==='year'?$('yearTitle').textContent:'Все события';
+  const region=$('region').selectedOptions[0].textContent;
+  output.innerHTML='<div class="print-heading"><img src="logo.svg" width="115" alt="UNITRAMP"><h1></h1><p></p></div><div class="print-content"></div><p class="print-footnote">Даты проверены 03.11.2026. Предварительные даты уточняйте у организатора.</p>';
+  output.querySelector('h1').textContent=title;
+  output.querySelector('.print-heading p').textContent=region+($('search').value.trim()?' · Поиск: '+$('search').value.trim():'');
+  const content=output.querySelector('.print-content');
+  if(mode==='list'){
+    const items=filtered().sort((a,b)=>(a.start||'9999').localeCompare(b.start||'9999'));
+    content.innerHTML=items.length?items.map(e=>`<article class="print-record"><h2>${e.name}</h2><p><strong>${range(e)}</strong><br>${e.city} · ${e.venue}</p><p>${e.description}</p>${e.note?`<p class="print-note">${e.note}</p>`:''}<a href="${e.url}">${e.url}</a></article>`).join(''):'<p>По выбранным фильтрам событий нет.</p>';
+  }else{
+    const view=$(mode==='calendar'?'calendarView':'yearView').cloneNode(true);
+    view.removeAttribute('id');view.hidden=false;
+    view.querySelector('.monthbar').remove();
+    view.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));
+    content.append(view);
+  }
+}
+$('printButton').onclick=async()=>{await document.fonts.ready;preparePrint();window.print()};
+window.addEventListener('beforeprint',preparePrint);
